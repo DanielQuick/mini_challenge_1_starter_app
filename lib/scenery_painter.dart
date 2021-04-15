@@ -81,11 +81,16 @@ class SceneryPainter extends CustomPainter {
       upOrDown = -1;
     }
 
-    final leftMtLeftPt = Offset(0, reflectionHeightDelta + upOrDown * skyHeight);
-    final leftMtPeakPt = Offset(size.width / 4, reflectionHeightDelta + upOrDown * _canvasHeight * .5);
-    final leftMtRtPt = Offset(size.width / 2, reflectionHeightDelta + upOrDown * _canvasHeight * .58);
-    final rtMtPeakPt = Offset(3 * size.width / 4, reflectionHeightDelta + upOrDown * _canvasHeight * .4);
-    final rtMtRtPt = Offset(size.width, reflectionHeightDelta + upOrDown * skyHeight);
+    final leftMtLeftPt =
+        Offset(0, reflectionHeightDelta + upOrDown * skyHeight);
+    final leftMtPeakPt = Offset(
+        size.width / 4, reflectionHeightDelta + upOrDown * _canvasHeight * .5);
+    final leftMtRtPt = Offset(
+        size.width / 2, reflectionHeightDelta + upOrDown * _canvasHeight * .58);
+    final rtMtPeakPt = Offset(3 * size.width / 4,
+        reflectionHeightDelta + upOrDown * _canvasHeight * .4);
+    final rtMtRtPt =
+        Offset(size.width, reflectionHeightDelta + upOrDown * skyHeight);
 
     final mtPath = Path();
     mtPath.moveTo(leftMtLeftPt.dx, leftMtLeftPt.dy);
@@ -124,7 +129,7 @@ class SceneryPainter extends CustomPainter {
     final outerRadius = 40.0;
     final innerRadius = outerRadius * .75;
     final glowRadius = outerRadius + outerRadius / 3;
-    final moonColor = Colors.grey[300];
+    final moonColor = Colors.grey[500];
     _paint.color = moonColor!;
     _paint.style = PaintingStyle.fill;
     canvas.drawCircle(moonCenter, outerRadius, _paint);
